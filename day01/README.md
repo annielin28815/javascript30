@@ -6,11 +6,15 @@
 
 ### 摘要
 
-- 利用輸入鍵盤的案件事件 keydown 觸發功能，利用 keyCode 取值，並將 keyCode 的值對應到 data-key，接者對相對應的` audioaudio[data-key="${e.keyCode}"]`放出音樂 `audio.play()`。
-  `window.addEventListener('keydown', playsound);`
-- 可以把音樂撥放時間重置 `audio.currentTime = num`
-- 利用`selector.classList.add('playing')`，可將選定的標籤加入 class 的後綴字；同理用 `selector.classList.remove('playing')`可移除選定的 class 後綴字。
-- 事件`transitionend`使用方式:當使用過`transition`後執行 callback 內容。
+- 透過 JavaScript 使鍵盤按下相對應的英文字母後，播放出對應按鍵的聲音，並同時產生一個特效，在按下其他鍵後會關閉該特效，並於新按鍵中啟用。
+
+### HTML 概念
+
+- HTML 的 audio 標籤
+
+  `<audio src="sound/test.mp3"></audio>`
+
+- 透過 javascript 來操作： 1.`element.play()`進行播放 2.`element.currentTime`指定播放秒數
 
 ### CSS 概念
 
@@ -25,4 +29,10 @@
   `ease-out cubic-bezier(0.0, 0.0, 0.58, 1.0)`
   `ease-in-out cubic-bezier(0.42, 0.0, 0.58, 1.0)`
 
-- 可以直接註冊標籤，並在 css 內敘述標籤功能。
+### JavaScript 概念
+
+- 利用輸入鍵盤的案件事件 keydown 觸發功能，利用 keyCode 取值，並將 keyCode 的值對應到 data-key，接者對相對應的` audioaudio[data-key="${e.keyCode}"]`放出音樂 `audio.play()`。
+  `window.addEventListener('keydown', playsound);`
+- 可以把音樂撥放時間重置 `audio.currentTime = num`
+- 利用`selector.classList.add('playing')`，可將選定的標籤加入 class 的後綴字；同理用 `selector.classList.remove('playing')`可移除選定的 class 後綴字。
+- 事件`transitionend`使用方式:當使用過`transition`後執行 callback 內容。
