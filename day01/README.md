@@ -8,6 +8,10 @@
 
 - 透過 JavaScript 使鍵盤按下相對應的英文字母後，播放出對應按鍵的聲音，並同時產生一個特效，在按下其他鍵後會關閉該特效，並於新按鍵中啟用。
 
+- 練習完成畫面
+
+![day01預覽圖](https://i.imgur.com/JsjKugV.jpg)
+
 ### HTML 概念
 
 - HTML 的 audio 標籤
