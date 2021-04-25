@@ -1,4 +1,4 @@
-# Drum kit
+# ==Day02 - JS + CSS Clock==
 
 > JavaScript30 是一個線上的教學課程，利用三十天的時間每天實作一個簡單的 JS 作品並自身初學者的角度講解相關概念。
 > 詳見教學網站：https://JavaScript30.com。
@@ -6,37 +6,20 @@
 
 ### 摘要
 
-- 透過 JavaScript 使鍵盤按下相對應的英文字母後，播放出對應按鍵的聲音，並同時產生一個特效，在按下其他鍵後會關閉該特效，並於新按鍵中啟用。
-
+- 以 JS 及 CSS 實作時鐘。
 - 練習完成畫面
-
-![day01預覽圖](https://i.imgur.com/JsjKugV.jpg)
+  ![day02預覽圖](https://i.imgur.com/FyuMr5J.png)
 
 ### HTML 概念
 
-- HTML 的 audio 標籤
-
-  `<audio src="sound/test.mp3"></audio>`
-
-- 透過 javascript 來操作： 1.`element.play()`進行播放 2.`element.currentTime`指定播放秒數
+- 使用 div 分層包覆時鐘框線與時針、分針、秒針。
 
 ### CSS 概念
 
-- flex 基本用法:
-  `align-items : center; //垂直置中`
-  `justify-content:center; //水平置中`
-
-- transition 動畫效果用法: property duration timing-function delay;ex:transition:all 0.07s ease 1. property:有 width, color... 2. timing function:
-  `ease cubic-bezier(0.25, 0.1, 0.25, 1.0)`
-  `liner cubic-bezier(0.0, 0.0, 1.0, 1.0)`
-  `ease-in cubic-bezier(0.42, 0.0, 1.0, 1.0)`
-  `ease-out cubic-bezier(0.0, 0.0, 0.58, 1.0)`
-  `ease-in-out cubic-bezier(0.42, 0.0, 0.58, 1.0)`
+- 橫線使用`transform:rotate(90deg);`會變成直線，預設情況下，會以中心點當作軸心旋轉(50%)，若要移動軸心則要使用`transform-origin:100%`(最右側)。
+- transition 動畫效果用法: ease 可當作動畫的呈現效果。
 
 ### JavaScript 概念
 
-- 利用輸入鍵盤的案件事件 keydown 觸發功能，利用 keyCode 取值，並將 keyCode 的值對應到 data-key，接者對相對應的` audioaudio[data-key="${e.keyCode}"]`放出音樂 `audio.play()`。
-  `window.addEventListener('keydown', playsound);`
-- 可以把音樂撥放時間重置 `audio.currentTime = num`
-- 利用`selector.classList.add('playing')`，可將選定的標籤加入 class 的後綴字；同理用 `selector.classList.remove('playing')`可移除選定的 class 後綴字。
-- 事件`transitionend`使用方式:當使用過`transition`後執行 callback 內容。
+- 設置每次執行時間 `setInterval(setDate, 1000)`，設置每次執行時的內容。
+- 取時間使用`now = new Date()`, 可以取得的分秒時 `now.getSeconds()`。

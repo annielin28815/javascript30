@@ -1,4 +1,4 @@
-# Drum kit
+# ==Day01 - Drum kit==
 
 > JavaScript30 是一個線上的教學課程，利用三十天的時間每天實作一個簡單的 JS 作品並自身初學者的角度講解相關概念。
 > 詳見教學網站：https://JavaScript30.com。
@@ -7,15 +7,12 @@
 ### 摘要
 
 - 透過 JavaScript 使鍵盤按下相對應的英文字母後，播放出對應按鍵的聲音，並同時產生一個特效，在按下其他鍵後會關閉該特效，並於新按鍵中啟用。
-
 - 練習完成畫面
-
-![day01預覽圖](https://i.imgur.com/JsjKugV.jpg)
+  ![day01預覽圖](https://i.imgur.com/JsjKugV.jpg)
 
 ### HTML 概念
 
 - HTML 的 audio 標籤
-
   `<audio src="sound/test.mp3"></audio>`
 
 - 透過 javascript 來操作： 1.`element.play()`進行播放 2.`element.currentTime`指定播放秒數
