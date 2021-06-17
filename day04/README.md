@@ -5,3 +5,6 @@
 > 原 GitHub 位址：https://github.com/wesbos/JavaScript30
 
 ### 摘要
+
+- 練習完成畫面
+  ![day04預覽圖](https://prnt.sc/15pum6i)
