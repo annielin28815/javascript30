@@ -7,4 +7,4 @@
 ### 摘要
 
 - 練習完成畫面
-  ![day04預覽圖](https://prnt.sc/15pum6i)
+  ![day04預覽圖](https://i.imgur.com/KUshYp9.png)
