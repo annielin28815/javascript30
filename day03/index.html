@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day03 - Scoped CSS Variables and JS</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+  <title>Day03 - Scoped CSS Variables and JS</title>
 </head>
 
 <body>
@@ -27,21 +28,6 @@
   </div>
 
   <img src="https://www.lantinghotel.com.tw/_design/%E5%91%A8%E9%82%8A%E6%99%AF%E9%BB%9E/_imagecache/shutterstock_34380835.jpg">
-
-
-  <script>
-    const inputs = document.querySelectorAll('.controls input');
-
-    function handleUpdate() {
-      const suffix = this.dataset.sizing || '';
-      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
-    }
-
-    inputs.forEach(input => input.addEventListener('change', handleUpdate));
-    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
-  </script>
-
-
 </body>
 
 </html>
