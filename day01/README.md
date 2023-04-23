@@ -32,7 +32,7 @@
 
 ### JavaScript 概念
 
-- 利用輸入鍵盤的案件事件 keydown 觸發功能，利用 keyCode 取值，並將 keyCode 的值對應到 data-key，接者對相對應的` audioaudio[data-key="${e.keyCode}"]`放出音樂 `audio.play()`。
+- 利用輸入鍵盤的案件事件 keydown 觸發功能，利用 keyCode 取值(每個案件都有自己的 keycode )，並將 keyCode 的值對應到 data-key，接者對相對應的` audioaudio[data-key="${e.keyCode}"]`，呼叫 `audio.play()` 放出音樂 。
   `window.addEventListener('keydown', playsound);`
 - 可以把音樂撥放時間重置 `audio.currentTime = num`
 - 利用`selector.classList.add('playing')`，可將選定的標籤加入 class 的後綴字；同理用 `selector.classList.remove('playing')`可移除選定的 class 後綴字。

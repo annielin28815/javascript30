@@ -15,11 +15,14 @@ function removeTransition(e) {
 function playSound(e) {
   const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
   const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
-  if (!audio) return;
+  // if (!audio) return;
+  if(audio){
+    key.classList.add('playing');
+    audio.currentTime = 0;
+    audio.play();
 
-  key.classList.add('playing');
-  audio.currentTime = 0;
-  audio.play();
+  }
+
 }
 // 新增click功能綁定至每個class="key"
 const keys = Array.from(document.querySelectorAll('.key'));
