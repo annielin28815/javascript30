@@ -5,3 +5,7 @@
 > 原 GitHub 位址：https://github.com/wesbos/JavaScript30
 
 ### 摘要
+
+使用 `console.groupCollapsed` 和 `console.groupEnd`: 可把很多個 `console.log` 包起來。
+
+`console.count()`: 用來顯示出現次數。
