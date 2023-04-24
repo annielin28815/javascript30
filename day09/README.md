@@ -6,6 +6,12 @@
 
 ### 摘要
 
-使用 `console.groupCollapsed` 和 `console.groupEnd`: 可把很多個 `console.log` 包起來。
+此篇主要是介紹 console 功能。
 
-`console.count()`: 用來顯示出現次數。
+| code | des | note |
+| --- | --- | --- |
+| `console.count()` | 用來顯示出現次數。 | |
+| `console.dir()` | 可以顯示選取物件的所有屬性 | |
+| `console.time()` 和 `console.timeEnd()` | 可用來計算區域內執行的時間 | |
+| `console.groupCollapsed` 和 `console.groupEnd` | 可把很多個 `console.log` 包起來，做一個折合區塊訊息。 | |
+| `console.table()` | 可以把資料整理成table格式方便瀏覽。 | |
