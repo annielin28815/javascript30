@@ -10,12 +10,11 @@ const ranges = player.querySelectorAll('.player__slider');
 /* Build out functions */
 function togglePlay() {
   const method = video.paused ? 'play' : 'pause';
-  video[method]();
+  video[method](); // 直接操作 video 的屬性
 }
 
 function updateButton() {
   const icon = this.paused ? '►' : '❚ ❚';
-  console.log(icon);
   toggle.textContent = icon;
 }
 
@@ -27,6 +26,7 @@ function handleRangeUpdate() {
   video[this.name] = this.value;
 }
 
+// 使用 video 的 currenTime 與 duration 計算出進度％數
 function handleProgress() {
   const percent = (video.currentTime / video.duration) * 100;
   progressBar.style.flexBasis = `${percent}%`;
@@ -43,6 +43,7 @@ video.addEventListener('play', updateButton);
 video.addEventListener('pause', updateButton);
 video.addEventListener('timeupdate', handleProgress);
 
+// 監聽 range 拖曳條的 click 和 mousemove
 toggle.addEventListener('click', togglePlay);
 skipButtons.forEach(button => button.addEventListener('click', skip));
 ranges.forEach(range => range.addEventListener('change', handleRangeUpdate));
