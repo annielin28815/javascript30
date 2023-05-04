@@ -30,19 +30,28 @@ console.log(players, team);
 
 // Why? It's because that is an array reference, not an array copy. They both point to the same array!
 
-// So, how do we fix this? We take a copy instead!
+/* So, how do we fix this? We take a copy instead!
+* 如果直接使用slice()不指定起始與結束位置的話，就等於直接複製整個整列
+*/
 const team2 = players.slice();
 
 // one way
 
-// or create a new array and concat the old one in
+/* or create a new array and concat the old one in
+* 使用concat()可以合併陣列，所以如果使用空陣列來合併原陣列，也會達到複製整個陣列的效果
+*/
 const team3 = [].concat(players);
 
-// or use the new ES6 Spread
+/* or use the new ES6 Spread
+* 直接使用 ES6 的Spread
+*/
 const team4 = [...players];
 team4[3] = 'heeee hawww';
-console.log(team4);
 
+
+/* or use the new ES6 from
+* 直接使用 ES6 的from
+*/
 const team5 = Array.from(players);
 
 // now when we update it, the original one isn't changed
@@ -59,7 +68,9 @@ const person = {
 // const captain = person;
 // captain.number = 99;
 
-// how do we take a copy instead?
+/* how do we take a copy instead?
+* 指定一個空的物件並把目標對象塞進去
+*/
 const cap2 = Object.assign({}, person, { number: 99, age: 12 });
 console.log(cap2);
 
@@ -82,6 +93,5 @@ console.log(wes);
 
 const dev = Object.assign({}, wes);
 
+// 把目標對象作轉換賦值的動作
 const dev2 = JSON.parse(JSON.stringify(wes));
-
-
