@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 
 <head>
   <meta charset="UTF-8">
@@ -32,31 +32,7 @@
         href="">odio</a>, distinctio magni impedit tempore enim repellendus <a href="">repudiandae</a> quas!</p>
   </div>
 
-  <script>
-    const triggers = document.querySelectorAll('a');
-    const highlight = document.createElement('span');
-    highlight.classList.add('highlight');
-    document.body.appendChild(highlight);
-
-    function highlightLink() {
-      const linkCoords = this.getBoundingClientRect();
-      console.log(linkCoords);
-      const coords = {
-        width: linkCoords.width,
-        height: linkCoords.height,
-        top: linkCoords.top + window.scrollY,
-        left: linkCoords.left + window.scrollX
-      };
-
-      highlight.style.width = `${coords.width}px`;
-      highlight.style.height = `${coords.height}px`;
-      highlight.style.transform = `translate(${coords.left}px, ${coords.top}px)`;
-
-    }
-
-    triggers.forEach(a => a.addEventListener('mouseenter', highlightLink));
-
-  </script>
+  <script src="main.js"></script>
 </body>
 
 </html>
