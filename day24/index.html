@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 
 <head>
   <meta charset="UTF-8">
@@ -161,24 +161,7 @@
       fugit, ut! Tempore non magnam, amet, facere ducimus accusantium eos veritatis neque.</p>
   </div>
 
-  <script>
-    // Not a ton of code, but hard to
-    const nav = document.querySelector('#main');
-    let topOfNav = nav.offsetTop;
-
-    function fixNav() {
-      if (window.scrollY >= topOfNav) {
-        document.body.style.paddingTop = nav.offsetHeight + 'px';
-        document.body.classList.add('fixed-nav');
-      } else {
-        document.body.classList.remove('fixed-nav');
-        document.body.style.paddingTop = 0;
-      }
-    }
-
-    window.addEventListener('scroll', fixNav);
-
-  </script>
+  <script src="main.js"></script>
 
 
 </body>
